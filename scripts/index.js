@@ -1,23 +1,88 @@
 // Navbar scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 20);
-    });
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+});
 
-    // Mobile nav
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
+// Mobile nav
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
 
-    // Reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => {
-        if (e.isIntersecting) {
-          setTimeout(() => e.target.classList.add('visible'), i * 80);
-        }
-      });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
+// Hero Category Toggle
+const toggleBtns = document.querySelectorAll('.toggle-btn');
+const coursesContent = document.getElementById('courses-content');
+const servicesContent = document.getElementById('services-content');
+const coursesVisual = document.getElementById('courses-visual');
+const servicesVisual = document.getElementById('services-visual');
+
+// Update stats when toggling
+const statElements = {
+  courses: {
+    stat1: '15+',
+    stat2: '2K+',
+    stat3: '98%',
+    label1: 'Courses',
+    label2: 'Students',
+    label3: 'Satisfaction'
+  },
+  services: {
+    stat1: '50+',
+    stat2: '100+',
+    stat3: '99%',
+    label1: 'Businesses',
+    label2: 'Projects',
+    label3: 'Uptime'
+  }
+};
+
+toggleBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const category = btn.dataset.category;
+    
+    // Remove active class from all buttons
+    toggleBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    if (category === 'courses') {
+      coursesContent.classList.add('active');
+      servicesContent.classList.remove('active');
+      coursesVisual.classList.add('active');
+      servicesVisual.classList.remove('active');
+      
+      // Update stats
+      document.getElementById('stat-1').textContent = statElements.courses.stat1;
+      document.getElementById('stat-2').textContent = statElements.courses.stat2;
+      document.getElementById('stat-3').textContent = statElements.courses.stat3;
+      document.getElementById('stat-label-1').textContent = statElements.courses.label1;
+      document.getElementById('stat-label-2').textContent = statElements.courses.label2;
+      document.getElementById('stat-label-3').textContent = statElements.courses.label3;
+    } else {
+      servicesContent.classList.add('active');
+      coursesContent.classList.remove('active');
+      servicesVisual.classList.add('active');
+      coursesVisual.classList.remove('active');
+      
+      // Update stats
+      document.getElementById('stat-1').textContent = statElements.services.stat1;
+      document.getElementById('stat-2').textContent = statElements.services.stat2;
+      document.getElementById('stat-3').textContent = statElements.services.stat3;
+      document.getElementById('stat-label-1').textContent = statElements.services.label1;
+      document.getElementById('stat-label-2').textContent = statElements.services.label2;
+      document.getElementById('stat-label-3').textContent = statElements.services.label3;
+    }
+  });
+});
+
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+    }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));

@@ -285,7 +285,7 @@
 /* ---------- Why Us ---------- */
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 48px;
 }
@@ -323,19 +323,87 @@
   line-height: 1.65;
 }
 
+/* ---------- Trust Section ---------- */
+.trust-section {
+  background: var(--surface-alt);
+}
+
+.trust-content {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.trust-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.trust-content > p {
+  font-size: 17px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+
+.trust-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.trust-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.trust-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.trust-point strong {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.trust-point p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid  { grid-template-columns: repeat(2, 1fr); }
+  .trust-points { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 860px) {
   .about-intro-grid { grid-template-columns: 1fr; }
   .mv-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 580px) {
   .about-stats { grid-template-columns: 1fr 1fr; }
   .team-grid { grid-template-columns: 1fr 1fr; }
   .why-grid  { grid-template-columns: 1fr; }
+  .trust-points { grid-template-columns: 1fr; }
 }
