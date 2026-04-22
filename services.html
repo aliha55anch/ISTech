@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services — ISTech</title>
-  <link rel="stylesheet" href="shared.css" />
-  <link rel="stylesheet" href="services.css" />
+  <link rel="stylesheet" href="./styles/shared.css" />
+  <link rel="stylesheet" href="./styles/services.css" />
 </head>
 <body>
 
@@ -282,7 +282,7 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a>
-        <a href="pricing.html">Pricing</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -296,27 +296,11 @@
       </div>
       <div class="footer-bottom">
         <span>© 2025 ISTech. All rights reserved.</span>
-        <span>Built with ❤️ for learners</span>
+        <span>Developed by Faraz Rasheed and Ali Hassan</span>
       </div>
     </div>
   </footer>
 
-  <script>
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 20);
-    });
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => {
-        if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 70);
-      });
-    }, { threshold: 0.08 });
-    reveals.forEach(el => observer.observe(el));
-  </script>
+  <script src="./scripts/services.js"></script>
 </body>
 </html>
