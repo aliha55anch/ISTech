@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up — ISTech</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body class="auth-body">
+
+  <!-- Minimal nav -->
+  <nav class="auth-nav">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark"><span>IS</span></div>
+      ISTech
+    </a>
+    <span class="auth-nav-hint">Already have an account? <a href="login.html">Log in →</a></span>
+  </nav>
+
+  <main class="auth-main">
+
+    <!-- Left Panel -->
+    <aside class="auth-panel auth-panel-visual auth-panel-signup">
+      <div class="apv-inner">
+        <div class="apv-benefits">
+          <h2>Start Learning Today</h2>
+          <p>Join over 2,000 professionals who've transformed their careers with ISTech.</p>
+          <ul class="apv-benefit-list">
+            <li><span class="apv-check">✓</span> Access to 12+ professional courses</li>
+            <li><span class="apv-check">✓</span> Industry-recognized certificates</li>
+            <li><span class="apv-check">✓</span> Lifetime access to course materials</li>
+            <li><span class="apv-check">✓</span> Career support &amp; job board</li>
+            <li><span class="apv-check">✓</span> Live Q&amp;A sessions with instructors</li>
+          </ul>
+        </div>
+        <div class="apv-course-preview">
+          <div class="acp-card">
+            <span>📊</span>
+            <div><strong>Power BI</strong><small>8 weeks · Certificate</small></div>
+          </div>
+          <div class="acp-card">
+            <span>🐍</span>
+            <div><strong>Python</strong><small>10 weeks · Certificate</small></div>
+          </div>
+          <div class="acp-card">
+            <span>🌍</span>
+            <div><strong>IELTS Prep</strong><small>8 weeks · Certificate</small></div>
+          </div>
+        </div>
+        <div class="apv-bg-shape"></div>
+      </div>
+    </aside>
+
+    <!-- Right Panel — Form -->
+    <section class="auth-panel auth-panel-form">
+      <div class="auth-form-inner">
+
+        <div class="auth-form-header">
+          <h1>Create your account</h1>
+          <p>Free to join. Start learning in minutes.</p>
+        </div>
+
+        <!-- Social Login -->
+        <div class="social-auth">
+          <button class="social-auth-btn" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            Sign up with Google
+          </button>
+          <button class="social-auth-btn" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Sign up with LinkedIn
+          </button>
+        </div>
+
+        <div class="auth-divider"><span>or sign up with email</span></div>
+
+        <!-- Multi-step form -->
+        <div class="step-indicator">
+          <div class="step-dot active" id="step1dot"></div>
+          <div class="step-line"></div>
+          <div class="step-dot" id="step2dot"></div>
+          <div class="step-line"></div>
+          <div class="step-dot" id="step3dot"></div>
+        </div>
+
+        <form class="auth-form" id="signupForm" novalidate>
+
+          <!-- Step 1: Personal Info -->
+          <div class="form-step" id="step1">
+            <div class="step-title">Step 1 of 3 — Personal Info</div>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="firstName">First Name <span class="req">*</span></label>
+                <input type="text" id="firstName" name="firstName" placeholder="Ahmed" required />
+                <span class="field-error" id="firstNameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name <span class="req">*</span></label>
+                <input type="text" id="lastName" name="lastName" placeholder="Khan" required />
+                <span class="field-error" id="lastNameError"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="signupEmail">Email Address <span class="req">*</span></label>
+              <input type="email" id="signupEmail" name="email" placeholder="your@email.com" required />
+              <span class="field-error" id="signupEmailError"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+92 300 000 0000" />
+            </div>
+            <button type="button" class="btn btn-primary auth-submit" id="step1Next">
+              Continue <span class="btn-arrow">→</span>
+            </button>
+          </div>
+
+          <!-- Step 2: Account Setup -->
+          <div class="form-step hidden" id="step2">
+            <div class="step-title">Step 2 of 3 — Create Password</div>
+            <div class="form-group">
+              <label for="signupPassword">Password <span class="req">*</span></label>
+              <div class="password-field">
+                <input type="password" id="signupPassword" name="password" placeholder="Min. 8 characters" required />
+                <button type="button" class="pw-toggle" id="pwToggle1" aria-label="Toggle">👁</button>
+              </div>
+              <span class="field-error" id="signupPasswordError"></span>
+              <div class="pw-strength" id="pwStrength">
+                <div class="pw-bar"><div class="pw-bar-fill" id="pwBar"></div></div>
+                <span id="pwStrengthLabel">Enter a password</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password <span class="req">*</span></label>
+              <div class="password-field">
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Repeat password" required />
+                <button type="button" class="pw-toggle" id="pwToggle2" aria-label="Toggle">👁</button>
+              </div>
+              <span class="field-error" id="confirmPasswordError"></span>
+            </div>
+            <div class="step-actions">
+              <button type="button" class="btn btn-outline" id="step2Back">← Back</button>
+              <button type="button" class="btn btn-primary" id="step2Next">Continue →</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Course Interest -->
+          <div class="form-step hidden" id="step3">
+            <div class="step-title">Step 3 of 3 — Your Interests</div>
+            <div class="form-group">
+              <label for="courseInterest">Interested Course</label>
+              <select id="courseInterest" name="courseInterest">
+                <option value="" disabled selected>Select a course…</option>
+                <option>Power BI</option>
+                <option>Web Development</option>
+                <option>Python Programming</option>
+                <option>Accounting</option>
+                <option>Corporate Finance</option>
+                <option>QuickBooks</option>
+                <option>IELTS Preparation</option>
+                <option>English Speaking</option>
+                <option>Advanced MS Excel</option>
+                <option>Digital Marketing</option>
+                <option>ERP Fundamentals</option>
+                <option>Project Management</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="learningMode">Preferred Learning Mode</label>
+              <select id="learningMode" name="learningMode">
+                <option value="" disabled selected>Select mode…</option>
+                <option>Online (Live)</option>
+                <option>Online (Self-paced)</option>
+                <option>In-person (Rawalpindi)</option>
+                <option>Hybrid</option>
+              </select>
+            </div>
+            <div class="form-group form-checkbox">
+              <label class="checkbox-label">
+                <input type="checkbox" id="terms" name="terms" required />
+                <span class="checkbox-custom"></span>
+                I agree to the <a href="#" style="color:var(--accent)">Terms of Service</a> and <a href="#" style="color:var(--accent)">Privacy Policy</a>
+              </label>
+              <span class="field-error" id="termsError"></span>
+            </div>
+            <div class="step-actions">
+              <button type="button" class="btn btn-outline" id="step3Back">← Back</button>
+              <button type="submit" class="btn btn-primary" id="signupBtn">
+                <span id="signupBtnText">Create Account</span> <span class="btn-arrow">→</span>
+              </button>
+            </div>
+          </div>
+
+        </form>
+
+        <!-- Success -->
+        <div class="auth-success hidden" id="signupSuccess">
+          <div class="success-icon">🎉</div>
+          <h3>Account Created!</h3>
+          <p>Welcome to ISTech! Your account has been created successfully. You can now log in and start learning.</p>
+          <a href="login.html" class="btn btn-primary" style="margin-top:8px;">Go to Log In →</a>
+        </div>
+
+        <p class="auth-switch">
+          Already have an account? <a href="login.html">Log in here →</a>
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Social placeholder
+    document.querySelectorAll('.social-auth-btn').forEach(btn => {
+      btn.addEventListener('click', () => alert('Social sign-up coming soon!'));
+    });
+
+    // Password toggles
+    function setupToggle(btnId, inputId) {
+      document.getElementById(btnId).addEventListener('click', function() {
+        const pw = document.getElementById(inputId);
+        pw.type = pw.type === 'password' ? 'text' : 'password';
+        this.textContent = pw.type === 'password' ? '👁' : '🙈';
+      });
+    }
+    setupToggle('pwToggle1', 'signupPassword');
+    setupToggle('pwToggle2', 'confirmPassword');
+
+    // Password strength
+    document.getElementById('signupPassword').addEventListener('input', function() {
+      const val = this.value;
+      const bar = document.getElementById('pwBar');
+      const lbl = document.getElementById('pwStrengthLabel');
+      let score = 0;
+      if (val.length >= 8) score++;
+      if (/[A-Z]/.test(val)) score++;
+      if (/[0-9]/.test(val)) score++;
+      if (/[^A-Za-z0-9]/.test(val)) score++;
+
+      const levels = ['', 'Weak', 'Fair', 'Good', 'Strong'];
+      const colors = ['', '#e53935', '#ff9800', '#2196f3', '#4caf50'];
+      const widths = ['0%', '25%', '50%', '75%', '100%'];
+
+      bar.style.width = widths[score];
+      bar.style.background = colors[score];
+      lbl.textContent = val ? levels[score] || 'Weak' : 'Enter a password';
+    });
+
+    // Step navigation helpers
+    function setStep(n) {
+      [1, 2, 3].forEach(i => {
+        document.getElementById(`step${i}`).classList.toggle('hidden', i !== n);
+        document.getElementById(`step${i}dot`).classList.toggle('active', i <= n);
+      });
+    }
+
+    // Step 1 validation
+    document.getElementById('step1Next').addEventListener('click', () => {
+      const fn = document.getElementById('firstName');
+      const ln = document.getElementById('lastName');
+      const em = document.getElementById('signupEmail');
+      let ok = true;
+
+      if (!fn.value.trim()) { document.getElementById('firstNameError').textContent = 'Required.'; fn.classList.add('error'); ok = false; }
+      else { document.getElementById('firstNameError').textContent = ''; fn.classList.remove('error'); }
+
+      if (!ln.value.trim()) { document.getElementById('lastNameError').textContent = 'Required.'; ln.classList.add('error'); ok = false; }
+      else { document.getElementById('lastNameError').textContent = ''; ln.classList.remove('error'); }
+
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!re.test(em.value.trim())) { document.getElementById('signupEmailError').textContent = 'Valid email required.'; em.classList.add('error'); ok = false; }
+      else { document.getElementById('signupEmailError').textContent = ''; em.classList.remove('error'); }
+
+      if (ok) setStep(2);
+    });
+
+    document.getElementById('step2Back').addEventListener('click', () => setStep(1));
+
+    // Step 2 validation
+    document.getElementById('step2Next').addEventListener('click', () => {
+      const pw  = document.getElementById('signupPassword');
+      const cpw = document.getElementById('confirmPassword');
+      let ok = true;
+
+      if (pw.value.length < 8) { document.getElementById('signupPasswordError').textContent = 'Min. 8 characters.'; pw.classList.add('error'); ok = false; }
+      else { document.getElementById('signupPasswordError').textContent = ''; pw.classList.remove('error'); }
+
+      if (cpw.value !== pw.value) { document.getElementById('confirmPasswordError').textContent = 'Passwords do not match.'; cpw.classList.add('error'); ok = false; }
+      else { document.getElementById('confirmPasswordError').textContent = ''; cpw.classList.remove('error'); }
+
+      if (ok) setStep(3);
+    });
+
+    document.getElementById('step3Back').addEventListener('click', () => setStep(2));
+
+    // Final submit
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const terms = document.getElementById('terms');
+      if (!terms.checked) {
+        document.getElementById('termsError').textContent = 'You must agree to the terms.';
+        return;
+      }
+      document.getElementById('termsError').textContent = '';
+
+      const btn = document.getElementById('signupBtn');
+      const txt = document.getElementById('signupBtnText');
+      btn.disabled = true;
+      txt.textContent = 'Creating account…';
+
+      setTimeout(() => {
+        document.querySelector('.auth-form').classList.add('hidden');
+        document.querySelector('.step-indicator').classList.add('hidden');
+        document.querySelector('.auth-divider').classList.add('hidden');
+        document.querySelector('.social-auth').classList.add('hidden');
+        document.querySelector('.auth-form-header').style.display = 'none';
+        document.getElementById('signupSuccess').classList.remove('hidden');
+      }, 1500);
+    });
+  </script>
+</body>
+</html>

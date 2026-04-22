@@ -1,0 +1,217 @@
+/* ============================================
+   ISTech - Courses Page (courses.css)
+   ============================================ */
+
+/* ---------- Filter Bar ---------- */
+.filter-bar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 100;
+}
+
+.filter-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  max-width: 1180px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  padding: 9px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  transition: all var(--transition);
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+.filter-tab:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.filter-tab.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.filter-count {
+  font-size: 13px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.filter-count span {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 16px;
+}
+
+/* ---------- Courses Grid ---------- */
+.all-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ---------- Full Course Card ---------- */
+.full-course-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition);
+}
+
+.full-course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.fcc-header {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.fcc-icon {
+  font-size: 52px;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.2));
+}
+
+.fcc-cat-badge {
+  position: absolute;
+  top: 14px; right: 14px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 50px;
+  backdrop-filter: blur(6px);
+}
+
+/* Color variants */
+.fcc-blue   { background: linear-gradient(135deg, #0a2540 0%, #1a4a8a 100%); }
+.fcc-teal   { background: linear-gradient(135deg, #006b5f 0%, #00c2a8 100%); }
+.fcc-orange { background: linear-gradient(135deg, #c44a00 0%, #ff6b35 100%); }
+.fcc-purple { background: linear-gradient(135deg, #4a0080 0%, #9b59b6 100%); }
+.fcc-green  { background: linear-gradient(135deg, #1a6b00 0%, #4caf50 100%); }
+.fcc-red    { background: linear-gradient(135deg, #8b0000 0%, #e53935 100%); }
+.fcc-navy   { background: linear-gradient(135deg, #001a40 0%, #0d3a6e 100%); }
+.fcc-indigo { background: linear-gradient(135deg, #1a0066 0%, #5c35cc 100%); }
+
+.fcc-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.fcc-body h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.fcc-body > p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.fcc-features {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 16px;
+  background: var(--surface-alt);
+  border-radius: var(--radius-sm);
+}
+
+.fcc-features li {
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 400;
+}
+
+.fcc-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.fcc-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(10,37,64,0.07);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+.fcc-btn {
+  margin-top: auto;
+  width: 100%;
+  justify-content: center;
+  padding: 14px;
+}
+
+/* ---------- Courses CTA ---------- */
+.courses-cta-section {
+  background: var(--surface-alt);
+  border-top: 1px solid var(--border);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.courses-cta-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.courses-cta-inner p {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .all-courses-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .all-courses-grid { grid-template-columns: 1fr; }
+  .filter-inner { flex-direction: column; align-items: flex-start; }
+}

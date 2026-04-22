@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — ISTech</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="pricing.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark"><span>IS</span></div>
+        ISTech
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="pricing.html" class="active">Pricing</a>
+      </div>
+      <div class="nav-cta">
+        <a href="login.html" class="btn btn-ghost">Log In</a>
+        <a href="signup.html" class="btn btn-accent">Sign Up →</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="page-header">
+    <div class="container page-header-content">
+      <span class="section-label">Transparent Pricing</span>
+      <h1>Simple, Clear Plans</h1>
+      <p>Invest in your future — choose a plan that fits your learning goals. No hidden fees, ever.</p>
+    </div>
+  </header>
+
+  <!-- ===== BILLING TOGGLE ===== -->
+  <div class="billing-toggle-bar">
+    <div class="container billing-toggle-inner">
+      <span class="billing-label" id="monthlyLabel">Monthly</span>
+      <button class="billing-toggle" id="billingToggle" aria-label="Toggle billing period">
+        <span class="toggle-knob"></span>
+      </button>
+      <span class="billing-label" id="yearlyLabel">Yearly</span>
+      <span class="savings-badge" id="savingsBadge">Save 20%</span>
+    </div>
+  </div>
+
+  <!-- ===== INDIVIDUAL PLANS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-label">For Individuals</span>
+        <h2 class="section-title">Course Enrollment Plans</h2>
+        <p class="section-subtitle">Flexible plans whether you want a single course or full unlimited access.</p>
+      </div>
+      <div class="pricing-grid">
+
+        <!-- Starter -->
+        <div class="pricing-card reveal">
+          <div class="pc-header">
+            <div class="pc-icon">🌱</div>
+            <h3>Starter</h3>
+            <p>Perfect for trying out a single course.</p>
+          </div>
+          <div class="pc-price">
+            <span class="pc-currency">PKR</span>
+            <span class="pc-amount" data-monthly="4,999" data-yearly="3,999">4,999</span>
+            <span class="pc-period">/ course</span>
+          </div>
+          <ul class="pc-features">
+            <li class="included">✓ 1 course of your choice</li>
+            <li class="included">✓ Course certificate</li>
+            <li class="included">✓ Lifetime access to materials</li>
+            <li class="included">✓ Community forum access</li>
+            <li class="excluded">✗ Live Q&amp;A sessions</li>
+            <li class="excluded">✗ Career support</li>
+            <li class="excluded">✗ 1-on-1 mentoring</li>
+          </ul>
+          <a href="signup.html" class="btn btn-outline pc-btn">Get Started</a>
+        </div>
+
+        <!-- Pro — Featured -->
+        <div class="pricing-card pricing-card-featured reveal">
+          <div class="pc-featured-badge">Most Popular</div>
+          <div class="pc-header">
+            <div class="pc-icon">🚀</div>
+            <h3>Pro</h3>
+            <p>Best for serious learners building a career.</p>
+          </div>
+          <div class="pc-price">
+            <span class="pc-currency">PKR</span>
+            <span class="pc-amount" data-monthly="9,999" data-yearly="7,999">9,999</span>
+            <span class="pc-period">/ month</span>
+          </div>
+          <ul class="pc-features">
+            <li class="included">✓ All 12+ courses</li>
+            <li class="included">✓ All certificates</li>
+            <li class="included">✓ Lifetime access to materials</li>
+            <li class="included">✓ Community forum access</li>
+            <li class="included">✓ Live Q&amp;A sessions (2× / week)</li>
+            <li class="included">✓ Career support &amp; job board</li>
+            <li class="excluded">✗ 1-on-1 mentoring</li>
+          </ul>
+          <a href="signup.html" class="btn btn-accent pc-btn">Start Learning</a>
+        </div>
+
+        <!-- Elite -->
+        <div class="pricing-card reveal">
+          <div class="pc-header">
+            <div class="pc-icon">💎</div>
+            <h3>Elite</h3>
+            <p>Premium experience with personal guidance.</p>
+          </div>
+          <div class="pc-price">
+            <span class="pc-currency">PKR</span>
+            <span class="pc-amount" data-monthly="19,999" data-yearly="15,999">19,999</span>
+            <span class="pc-period">/ month</span>
+          </div>
+          <ul class="pc-features">
+            <li class="included">✓ All 12+ courses</li>
+            <li class="included">✓ All certificates</li>
+            <li class="included">✓ Lifetime access to materials</li>
+            <li class="included">✓ Community forum access</li>
+            <li class="included">✓ Live Q&amp;A sessions (daily)</li>
+            <li class="included">✓ Priority career support</li>
+            <li class="included">✓ 4× 1-on-1 mentoring/month</li>
+          </ul>
+          <a href="signup.html" class="btn btn-primary pc-btn">Go Elite</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CORPORATE PLANS ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-label">For Organizations</span>
+        <h2 class="section-title">Corporate &amp; ERP Packages</h2>
+        <p class="section-subtitle">Train your entire team or deploy a custom ERP system — we've got plans built for businesses of every size.</p>
+      </div>
+      <div class="corp-grid">
+
+        <div class="corp-card reveal">
+          <div class="corp-card-top">
+            <span class="corp-icon">🏢</span>
+            <h3>Team Training</h3>
+            <span class="corp-size">5–20 employees</span>
+          </div>
+          <div class="corp-price">
+            <span>Starting at</span>
+            <strong>PKR 49,999</strong>
+            <span>/ month</span>
+          </div>
+          <ul class="corp-features">
+            <li>✓ Up to 20 user seats</li>
+            <li>✓ All ISTech courses</li>
+            <li>✓ Team progress dashboard</li>
+            <li>✓ Dedicated trainer sessions</li>
+            <li>✓ Group certificates</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline corp-btn">Request Quote</a>
+        </div>
+
+        <div class="corp-card corp-card-dark reveal">
+          <div class="corp-featured-label">Best Value</div>
+          <div class="corp-card-top">
+            <span class="corp-icon">🏭</span>
+            <h3>Enterprise Training</h3>
+            <span class="corp-size">20–100+ employees</span>
+          </div>
+          <div class="corp-price">
+            <span>Starting at</span>
+            <strong>PKR 1,49,999</strong>
+            <span>/ month</span>
+          </div>
+          <ul class="corp-features">
+            <li>✓ Unlimited user seats</li>
+            <li>✓ Custom course curriculum</li>
+            <li>✓ On-site training available</li>
+            <li>✓ Analytics &amp; reporting</li>
+            <li>✓ Priority 24/7 support</li>
+            <li>✓ LMS integration</li>
+          </ul>
+          <a href="contact.html" class="btn btn-accent corp-btn">Talk to Sales</a>
+        </div>
+
+        <div class="corp-card reveal">
+          <div class="corp-card-top">
+            <span class="corp-icon">⚙️</span>
+            <h3>Custom ERP</h3>
+            <span class="corp-size">Any business size</span>
+          </div>
+          <div class="corp-price">
+            <span>Project-based</span>
+            <strong>Custom Quote</strong>
+            <span>&nbsp;</span>
+          </div>
+          <ul class="corp-features">
+            <li>✓ Full ERP development</li>
+            <li>✓ All modules included</li>
+            <li>✓ Data migration</li>
+            <li>✓ Staff training</li>
+            <li>✓ 12-month support SLA</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline corp-btn">Get a Free Estimate</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COURSE PRICING TABLE ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-label">Per-Course Fees</span>
+        <h2 class="section-title">Individual Course Pricing</h2>
+        <p class="section-subtitle">Enroll in individual courses at fixed prices. All include certificates and lifetime access.</p>
+      </div>
+      <div class="price-table-wrapper reveal">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Category</th>
+              <th>Duration</th>
+              <th>Price (PKR)</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="pt-icon">📊</span> Power BI</td>
+              <td><span class="pt-cat cat-tech">Technology</span></td>
+              <td>8 Weeks</td>
+              <td class="pt-price">5,999</td>
+              <td><a href="signup.html" class="btn btn-primary pt-btn">Enroll</a></td>
+            </tr>
+            <tr>
+              <td><span class="pt-icon">💻</span> Web Development</td>
+              <td><span class="pt-cat cat-tech">Technology</span></td>
+              <td>12 Weeks</td>
+              <td class="pt-price">7,999</td>
+              <td><a href="signup.html" class="btn btn-primary pt-btn">Enroll</a></td>
+            </tr>
+            <tr>
+              <td><span class="pt-icon">🐍</span> Python Programming</td>
+              <td><span class="pt-cat cat-tech">Technology</span></td>
+              <td>10 Weeks</td>
+              <td class="pt-price">6,999</td>
+              <td><a href="signup.html" class="btn btn-primary pt-btn">Enroll</a></td>
+            </tr>
+            <tr>
+              <td><span class="pt-icon">🧾</span> Accounting</td>
+              <td><span class="pt-cat cat-finance">Finance</span></td>
+              <td>10 Weeks</td>
+              <td class="pt-price">5,499</td>
+              <td><a href="signup.html" class="btn btn-primary pt-btn">Enroll</a></td>
+            </tr>
+            <tr>
+              <td><span class="pt-icon">📈</span> Corporate Finance</td>
+              <td><span class="pt-cat cat-finance">Finance</span></td>
+              <td>8 Weeks</td>
+              <td class="pt-price">5,999</td>
+              <td><a href="signup.html" class="btn btn-primary pt-btn">Enroll</a></td>
+            </tr>
+            <tr>
+              <td><span class="pt-icon">📒</span> QuickBooks</td>
+              <td><span class="pt-cat cat-finance">Finance</span></td>
+              <td>6 Weeks</td>
+              <td class="pt-price">4,999</td>
+              <td><a href="signup.html" class="btn btn-primary pt-btn">Enroll</a></td>
+            </tr>
+            <tr>
+              <td><span class="pt-icon">🌍</span> IELTS Preparation</td>
+              <td><span class="pt-cat cat-language">Language</span></td>
+              <td>8 Weeks</td>
+              <td class="pt-price">6,499</td>
+              <td><a href="signup.html" class="btn btn-primary pt-btn">Enroll</a></td>
+            </tr>
+            <tr>
+              <td><span class="pt-icon">🗣️</span> English Speaking</td>
+              <td><span class="pt-cat cat-language">Language</span></td>
+              <td>8 Weeks</td>
+              <td class="pt-price">4,499</td>
+              <td><a href="signup.html" class="btn btn-primary pt-btn">Enroll</a></td>
+            </tr>
+            <tr>
+              <td><span class="pt-icon">📋</span> Advanced MS Excel</td>
+              <td><span class="pt-cat cat-tech">Technology</span></td>
+              <td>6 Weeks</td>
+              <td class="pt-price">3,999</td>
+              <td><a href="signup.html" class="btn btn-primary pt-btn">Enroll</a></td>
+            </tr>
+            <tr>
+              <td><span class="pt-icon">📣</span> Digital Marketing</td>
+              <td><span class="pt-cat cat-business">Business</span></td>
+              <td>8 Weeks</td>
+              <td class="pt-price">5,499</td>
+              <td><a href="signup.html" class="btn btn-primary pt-btn">Enroll</a></td>
+            </tr>
+            <tr>
+              <td><span class="pt-icon">⚙️</span> ERP Fundamentals</td>
+              <td><span class="pt-cat cat-business">Business</span></td>
+              <td>10 Weeks</td>
+              <td class="pt-price">6,999</td>
+              <td><a href="signup.html" class="btn btn-primary pt-btn">Enroll</a></td>
+            </tr>
+            <tr>
+              <td><span class="pt-icon">🗂️</span> Project Management</td>
+              <td><span class="pt-cat cat-business">Business</span></td>
+              <td>8 Weeks</td>
+              <td class="pt-price">5,999</td>
+              <td><a href="signup.html" class="btn btn-primary pt-btn">Enroll</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-label">Questions</span>
+        <h2 class="section-title">Pricing FAQs</h2>
+      </div>
+      <div class="pricing-faq-grid">
+        <div class="pfaq-item reveal">
+          <h4>Can I switch plans later?</h4>
+          <p>Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of the next billing cycle.</p>
+        </div>
+        <div class="pfaq-item reveal">
+          <h4>Is there a free trial?</h4>
+          <p>We offer a 7-day free preview on all Pro and Elite plans. No credit card required to start your trial.</p>
+        </div>
+        <div class="pfaq-item reveal">
+          <h4>What payment methods do you accept?</h4>
+          <p>We accept bank transfer, JazzCash, EasyPaisa, and credit/debit cards. Installment plans are available on request.</p>
+        </div>
+        <div class="pfaq-item reveal">
+          <h4>Do individual course fees include the certificate?</h4>
+          <p>Yes — every course fee includes a digital certificate of completion. Physical certificates are available for a small printing fee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="pricing-cta-section">
+    <div class="container pricing-cta-inner reveal">
+      <div>
+        <h2>Still Not Sure? Let's Talk.</h2>
+        <p>Our advisors will recommend the best plan for your goals and budget — free of charge.</p>
+      </div>
+      <div style="display:flex;gap:14px;flex-shrink:0;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-accent">Talk to an Advisor →</a>
+        <a href="courses.html" class="btn" style="color:#fff;border:2px solid rgba(255,255,255,0.3);border-radius:50px;padding:13px 28px;">Browse Courses</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-mark"><span>IS</span></div>
+            ISTech
+          </a>
+          <p class="footer-desc">Professional courses and ERP solutions designed to help individuals and businesses grow smarter.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Courses</h4>
+          <ul>
+            <li><a href="courses.html">Power BI</a></li>
+            <li><a href="courses.html">Python</a></li>
+            <li><a href="courses.html">IELTS</a></li>
+            <li><a href="courses.html">QuickBooks</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="mailto:info@istech.edu">info@istech.edu</a></li>
+            <li><a href="tel:+923001234567">+92 300 123 4567</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 ISTech. All rights reserved.</span>
+        <span>Built with ❤️ for learners</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+
+    document.getElementById('navToggle').addEventListener('click', () =>
+      document.getElementById('navLinks').classList.toggle('open'));
+
+    // Billing toggle
+    let isYearly = false;
+    const toggle = document.getElementById('billingToggle');
+    const monthlyLabel = document.getElementById('monthlyLabel');
+    const yearlyLabel  = document.getElementById('yearlyLabel');
+    const amounts = document.querySelectorAll('.pc-amount');
+
+    toggle.addEventListener('click', () => {
+      isYearly = !isYearly;
+      toggle.classList.toggle('active', isYearly);
+      monthlyLabel.classList.toggle('dim', isYearly);
+      yearlyLabel.classList.toggle('dim', !isYearly);
+      amounts.forEach(el => {
+        el.textContent = isYearly ? el.dataset.yearly : el.dataset.monthly;
+      });
+    });
+
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 70);
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

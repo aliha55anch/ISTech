@@ -1,0 +1,283 @@
+/* ============================================
+   ISTech - Services Page (services.css)
+   ============================================ */
+
+/* ---------- ERP Hero Grid ---------- */
+.erp-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.erp-check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.erp-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--text);
+}
+
+/* ERP Visual Card */
+.erp-visual-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.evc-header {
+  background: var(--surface-alt);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.evc-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+}
+.evc-dot-red    { background: #ff5f57; }
+.evc-dot-yellow { background: #ffbd2e; }
+.evc-dot-green  { background: #28ca41; }
+
+.evc-title {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+}
+
+.evc-body {
+  padding: 8px;
+}
+
+.evc-module {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 14px;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+  font-size: 14px;
+  color: var(--text);
+}
+.evc-module:hover { background: var(--surface-alt); }
+
+.evc-m-icon { font-size: 18px; }
+.evc-module span:nth-child(2) { flex: 1; font-weight: 500; }
+
+.evc-status {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 50px;
+  letter-spacing: 0.04em;
+}
+.evc-status.active   { background: rgba(40,202,65,0.12);  color: #1a8a30; }
+.evc-status.warning  { background: rgba(255,189,46,0.15); color: #9a6500; }
+.evc-status.inactive { background: rgba(0,0,0,0.06);      color: var(--text-muted); }
+
+/* ---------- ERP Solutions Grid ---------- */
+.erp-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.erp-sol-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.erp-sol-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.erp-sol-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+.erp-sol-card:hover::before { opacity: 1; }
+
+.erp-sol-icon {
+  font-size: 40px;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.erp-sol-card h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.erp-sol-card > p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.erp-sol-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.erp-sol-list li {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding-left: 14px;
+  position: relative;
+}
+.erp-sol-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 11px;
+}
+
+/* ---------- Process Steps ---------- */
+.process-steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin-top: 56px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+
+.process-step {
+  flex: 1;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.ps-num {
+  width: 56px; height: 56px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 800;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 16px rgba(10,37,64,0.2);
+}
+
+.ps-content h4 {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.ps-content p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 160px;
+  margin: 0 auto;
+}
+
+.process-connector {
+  flex-shrink: 0;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  margin-top: 28px;
+  opacity: 0.25;
+}
+
+/* ---------- Services CTA ---------- */
+.services-cta {
+  background: linear-gradient(135deg, var(--primary) 0%, #0d3a6e 100%);
+  padding: 72px 0;
+  position: relative;
+  overflow: hidden;
+}
+.services-cta::before {
+  content: '';
+  position: absolute;
+  top: -60%; right: -10%;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,194,168,0.12) 0%, transparent 70%);
+}
+
+.services-cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.services-cta-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.services-cta-inner p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+  font-weight: 300;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .erp-solutions-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 860px) {
+  .erp-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .process-steps { flex-direction: column; align-items: center; }
+  .process-connector { width: 2px; height: 32px; margin-top: 0; background: linear-gradient(180deg, var(--primary), var(--accent)); }
+  .services-cta-inner { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 580px) {
+  .erp-solutions-grid { grid-template-columns: 1fr; }
+}

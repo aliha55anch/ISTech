@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — ISTech</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark"><span>IS</span></div>
+        ISTech
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="login.html" class="btn btn-ghost">Log In</a>
+        <a href="signup.html" class="btn btn-accent">Sign Up →</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="page-header">
+    <div class="container page-header-content">
+      <span class="section-label">Let's Talk</span>
+      <h1>Contact Us</h1>
+      <p>Whether you're ready to enroll, need guidance, or want to discuss an ERP project — we're here to help.</p>
+    </div>
+  </header>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section">
+    <div class="container contact-layout">
+
+      <!-- Info Sidebar -->
+      <aside class="contact-info reveal">
+        <h3>Get in Touch</h3>
+        <p>Reach out through any channel — our team typically responds within one business day.</p>
+
+        <div class="contact-details">
+
+          <div class="contact-detail-item">
+            <div class="cdi-icon">📍</div>
+            <div>
+              <strong>Office</strong>
+              <span>123 Tech Avenue, Rawalpindi<br />Punjab, Pakistan</span>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="cdi-icon">📞</div>
+            <div>
+              <strong>Phone</strong>
+              <span><a href="tel:+923001234567">+92 300 123 4567</a></span>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="cdi-icon">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <span><a href="mailto:info@istech.edu">info@istech.edu</a></span>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="cdi-icon">🕐</div>
+            <div>
+              <strong>Office Hours</strong>
+              <span>Mon–Sat: 9:00 AM – 6:00 PM<br />Sunday: Closed</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="contact-social">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper reveal" id="contactFormWrapper">
+        <div class="form-header">
+          <h3>Send a Message</h3>
+          <p>Fill in the form and we'll get back to you shortly.</p>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name <span class="req">*</span></label>
+              <input type="text" id="firstName" name="firstName" placeholder="e.g. Ahmed" required />
+              <span class="field-error" id="firstNameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name <span class="req">*</span></label>
+              <input type="text" id="lastName" name="lastName" placeholder="e.g. Khan" required />
+              <span class="field-error" id="lastNameError"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            <span class="field-error" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+92 300 000 0000" />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject <span class="req">*</span></label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Select a topic…</option>
+              <option value="course-enrollment">Course Enrollment</option>
+              <option value="erp-project">ERP Project Inquiry</option>
+              <option value="course-info">Course Information</option>
+              <option value="career-guidance">Career Guidance</option>
+              <option value="other">Other</option>
+            </select>
+            <span class="field-error" id="subjectError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message <span class="req">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help you…" required></textarea>
+            <span class="field-error" id="messageError"></span>
+          </div>
+
+          <div class="form-group form-checkbox">
+            <label class="checkbox-label">
+              <input type="checkbox" id="consent" name="consent" required />
+              <span class="checkbox-custom"></span>
+              I agree to be contacted by ISTech regarding my inquiry.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
+            <span>Send Message</span>
+            <span class="btn-arrow">→</span>
+          </button>
+
+        </form>
+
+        <!-- Success State -->
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">✅</div>
+          <h3>Message Sent!</h3>
+          <p>Thank you for reaching out. Our team will get back to you within one business day.</p>
+          <button class="btn btn-outline" onclick="resetForm()">Send Another Message</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-grid">
+
+        <div class="faq-item reveal">
+          <h4>How do I enroll in a course?</h4>
+          <p>Simply fill in the contact form above or call us directly. Our admissions team will guide you through the enrollment process and provide schedule options.</p>
+        </div>
+
+        <div class="faq-item reveal">
+          <h4>Are courses available online or in-person?</h4>
+          <p>We offer both online (via Zoom/LMS) and in-person classes at our Rawalpindi campus. You can choose the format that suits your schedule best.</p>
+        </div>
+
+        <div class="faq-item reveal">
+          <h4>Do I get a certificate after completing a course?</h4>
+          <p>Yes, all ISTech courses include a professional certificate of completion. Certain courses also prepare you for industry certifications like Microsoft or PMI.</p>
+        </div>
+
+        <div class="faq-item reveal">
+          <h4>How long does an ERP implementation take?</h4>
+          <p>Implementation timelines vary by scope — small systems can go live in 4–6 weeks, while full enterprise deployments typically take 3–6 months depending on complexity.</p>
+        </div>
+
+        <div class="faq-item reveal">
+          <h4>Do you offer group or corporate training?</h4>
+          <p>Absolutely. We offer customized corporate training packages for teams and organizations. Contact us to discuss your requirements and we'll design a tailored program.</p>
+        </div>
+
+        <div class="faq-item reveal">
+          <h4>What payment options are available?</h4>
+          <p>We accept full payment, installment plans, and corporate invoicing. We also occasionally offer early-bird discounts and scholarships for outstanding students.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-mark"><span>IS</span></div>
+            ISTech
+          </a>
+          <p class="footer-desc">Professional courses and ERP solutions designed to help individuals and businesses grow smarter.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Courses</h4>
+          <ul>
+            <li><a href="courses.html">Power BI</a></li>
+            <li><a href="courses.html">Web Development</a></li>
+            <li><a href="courses.html">Accounting</a></li>
+            <li><a href="courses.html">Finance</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a>
+        <a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@istech.edu">info@istech.edu</a></li>
+            <li><a href="tel:+923001234567">+92 300 123 4567</a></li>
+            <li><a href="#">Rawalpindi, Pakistan</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 ISTech. All rights reserved.</span>
+        <span>Built with ❤️ for learners</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile nav
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 70);
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Form validation & submission
+    const form = document.getElementById('contactForm');
+    const successEl = document.getElementById('formSuccess');
+
+    function validateField(id, errorId, msg) {
+      const el = document.getElementById(id);
+      const err = document.getElementById(errorId);
+      if (!el.value.trim()) {
+        err.textContent = msg;
+        el.classList.add('error');
+        return false;
+      }
+      err.textContent = '';
+      el.classList.remove('error');
+      return true;
+    }
+
+    function validateEmail(id, errorId) {
+      const el = document.getElementById(id);
+      const err = document.getElementById(errorId);
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!re.test(el.value.trim())) {
+        err.textContent = 'Please enter a valid email address.';
+        el.classList.add('error');
+        return false;
+      }
+      err.textContent = '';
+      el.classList.remove('error');
+      return true;
+    }
+
+    // Live validation on blur
+    document.getElementById('firstName').addEventListener('blur', () =>
+      validateField('firstName', 'firstNameError', 'First name is required.'));
+    document.getElementById('lastName').addEventListener('blur', () =>
+      validateField('lastName', 'lastNameError', 'Last name is required.'));
+    document.getElementById('email').addEventListener('blur', () =>
+      validateEmail('email', 'emailError'));
+    document.getElementById('subject').addEventListener('blur', () =>
+      validateField('subject', 'subjectError', 'Please select a subject.'));
+    document.getElementById('message').addEventListener('blur', () =>
+      validateField('message', 'messageError', 'Message is required.'));
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const v1 = validateField('firstName', 'firstNameError', 'First name is required.');
+      const v2 = validateField('lastName', 'lastNameError', 'Last name is required.');
+      const v3 = validateEmail('email', 'emailError');
+      const v4 = validateField('subject', 'subjectError', 'Please select a subject.');
+      const v5 = validateField('message', 'messageError', 'Message is required.');
+      if (!v1 || !v2 || !v3 || !v4 || !v5) return;
+
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.querySelector('span').textContent = 'Sending…';
+
+      // Simulate async send
+      setTimeout(() => {
+        form.style.display = 'none';
+        successEl.style.display = 'flex';
+        document.querySelector('.form-header').style.display = 'none';
+      }, 1200);
+    });
+
+    function resetForm() {
+      form.reset();
+      form.style.display = 'block';
+      successEl.style.display = 'none';
+      document.querySelector('.form-header').style.display = 'block';
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = false;
+      btn.querySelector('span').textContent = 'Send Message';
+    }
+  </script>
+</body>
+</html>
